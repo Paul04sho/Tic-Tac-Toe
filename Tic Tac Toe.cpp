@@ -117,5 +117,7 @@ int main(){
 			break;
 		}
 	}
+	cout <<"\nAppuie sur une touche pour quitter...";
+	system("pause");
 	return 0;
 }
