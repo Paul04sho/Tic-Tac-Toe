@@ -1,4 +1,5 @@
 #include<iostream>
+#include<limits>
 using namespace std;
 
 char space[3][3]={{'1', '2', '3'}, {'4', '5', '6'}, {'7', '8', '9'}};
@@ -93,6 +94,7 @@ int main(){
 	cout<<"Nom du premier joueur :";
 	getline(cin,n1);
 	cout<<"Nom du second joueur :";
+	cin.ignore();
 	getline(cin,n2);
 	
 	cout<<n1<< " joue avec X\n";
@@ -118,6 +120,7 @@ int main(){
 		}
 	}
 	cout <<"\nAppuie sur une touche pour quitter...";
-	system("pause");
+	cin.ignore(numeric_limits<streamsize>::max(), '\n');
+    	cin.get();
 	return 0;
 }
